@@ -55,6 +55,13 @@ TruncarTablas();
                         <label>Ingrese Estado</label>
                         <input type="text" class="form-control" placeholder="Nodo" id="txtnodo"> 
                         <br>
+                        <label>Es de Aceptacion</label>
+                        <br>
+                        <select id="aceptacion" class="form-control">
+                            <option value="0">NO</option>
+                            <option value="1">SI</option>
+                        </select>
+                        <br>
                         <button id="guardar_nodo" class="btn btn-primary">Crear Estado</button>
                     </div>
                     <div class="col-md-12">

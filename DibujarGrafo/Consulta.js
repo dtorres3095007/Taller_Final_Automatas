@@ -7,12 +7,13 @@ $(document).ready(function () {
     $("#guardar_nodo").click(function () {
         $(".error").hide("slow");
         var valor = $("#txtnodo").val().toString();
+        var valor_Acep = $("#aceptacion").val().toString();
         if (valor.length == 0) {
             MensajeError("INGRESE ESTADO");
 
         } else {
 
-            CrearNodos(valor, 1, 1);
+            CrearNodos(valor, valor_Acep);
         }
     });
 
@@ -48,13 +49,13 @@ $(document).ready(function () {
 
 
 });
-function CrearNodos(label, inicial, final) {
+function CrearNodos(label,final) {
     $(".error").hide("slow");
     var indice_inicial = Buscar_indices(label);
     if (indice_inicial != -1) {
         MensajeError("EL ESTADO YA EXISTE");
     } else {
-        GuardarEstado(label, inicial, final);
+        GuardarEstado(label, final);
 
 
     }
@@ -107,8 +108,11 @@ function  PintarGrafo() {
     var network = new vis.Network(container, data, options);
 }
 
-function GuardarEstado(estado, inicial, final) {
-
+function GuardarEstado(estado,final) {
+    var inicial = 0;
+    if (indice==1){
+         inicial = 1;
+    }
     $.ajax({
         url: "datos.php?estado=si",
         dataType: "json",

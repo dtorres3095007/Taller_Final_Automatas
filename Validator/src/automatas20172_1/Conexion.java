@@ -19,7 +19,7 @@ public Connection conex(){
     try {
        Class.forName(driver);
        con=DriverManager.getConnection(url,"root","");
-        System.out.println("bien");
+    
     } catch (ClassNotFoundException | SQLException e) {
         
     JOptionPane.showMessageDialog(null, "Error al conectar con la DBA");

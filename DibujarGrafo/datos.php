@@ -48,4 +48,5 @@ function TruncarTablas() {
     return 1;
 }
 
+
 ?>

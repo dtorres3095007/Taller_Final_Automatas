@@ -10,11 +10,24 @@ import java.util.Arrays;
 public class Prueba {
 
     public static void main(String[] args) {
-
+        Grafo grafo = new Grafo();
         Datos a = new Datos();
         ArrayList<String> cadenas = a.ObtenerCadenas();
-        System.out.println("" + cadenas.size());
+        ArrayList<Estado> estados = a.ObtenerEstados();
+        ArrayList<Estado_Transicion> estados_transicion = a.ObtenerEstadosTrancision();
+        System.out.println("ESTADOS");
 
+        for (int i = 0; i < estados.size(); i++) {
+            System.out.println("Estado:" + estados.get(i).nombre + " Inicial: " + estados.get(i).isInicial() + " Final: " + estados.get(i).isFinal());
+        }
+        System.out.println("TRANCISION");
+        for (int i = 0; i < estados_transicion.size(); i++) {
+            System.out.println("Valor:" + estados_transicion.get(i).getValor() + " Inicial: " + estados_transicion.get(i).getInicial() + " Final: " + estados_transicion.get(i).getFinal());
+        }
+        System.out.println("CADENA");
+        for (int i = 0; i < cadenas.size(); i++) {
+            System.out.println("Cadena:" + cadenas.get(i));
+        }
         /*
         ///Alt +28∟
         ///Se crea el Objeto Grafo
@@ -43,15 +56,4 @@ public class Prueba {
          */
     }
 
-    /* public static boolean evaluarMatriz(String[][] matriz, String cadena) {
-        Grafo grafo = new Grafo();
-        for (int fila = 1; fila < matriz.length; fila++) {
-            for (int columna = 1; columna < matriz[fila].length; columna++) {
-                grafo.agregarEstadoTransicion(matriz[fila][0], matriz[0][columna], matriz[fila][columna]);
-            }
-        }
-        boolean sw=grafo.evaluarCadena(cadena);
-        System.out.println("Evaluar "+cadena+"->"+sw);
-        return sw;
-    }*/
 }
