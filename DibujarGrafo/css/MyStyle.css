@@ -1,0 +1,456 @@
+body,html{
+    margin: 0px;
+    padding: 0px;
+}
+.boton{
+
+    font-size: 13px;
+    padding: 3px;
+
+}.card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+
+}
+
+/*
+ * Card component
+ */
+.card {
+
+    margin: 0 auto;
+    /* shadows and rounded borders */
+
+}
+
+.profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/*
+ * Form styles
+ */
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+.reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.forgot-password,.remenber{
+    color: #404040;
+    font-weight: bold;
+    font-size:15px;
+}
+span img{
+    width: 3px;
+
+}
+#top-bar  li a{
+    cursor: pointer;
+}
+
+#btnentrar:hover{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cc0000+0,cc0000+100;Red+Flat */
+    background: #cc0000; /* Old browsers */
+    background: -moz-linear-gradient(top,  #cc0000 0%, #cc0000 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #cc0000 0%,#cc0000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #cc0000 0%,#cc0000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0000', endColorstr='#cc0000',GradientType=0 ); /* IE6-9 */
+
+    color: white;
+
+}
+
+.modal-header{
+    text-align: center;
+    color: white;
+    font-family: serif;
+
+    background-color: #990000;
+}
+.link{
+    color: #404040;
+    font-size: 13px;
+
+}
+input,a,p,h1,h2,h3,h4,h5,h6,li,ul,textArea,textarea{
+    font-family: serif;
+}
+
+nav li{
+    font-size: 18px;  
+
+}
+nav{
+    background-color: white;color: black;
+}
+nav  a{
+    text-decoration: none;
+    color: black;
+}
+nav a:hover{
+    color: #990000;
+}
+nav span{
+    color: #990000;
+}
+nav button{
+    background-color: red;
+}
+
+
+.logo-small {
+    color: #990000;
+    font-size: 50px;
+}
+
+.logo {
+    color: #990000;
+    font-size: 200px;
+}
+
+#inicio{
+    background: rgb(122,12,2); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(122,12,2,1) 0%, rgba(160,3,5,1) 44%, rgba(117,0,25,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(122,12,2,1) 0%,rgba(160,3,5,1) 44%,rgba(117,0,25,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(122,12,2,1) 0%,rgba(160,3,5,1) 44%,rgba(117,0,25,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    padding: 40px
+}
+.pad5{
+    padding-top: 15px;
+}
+.color-blanco{
+    color: white;
+
+}.banner-text{
+    border-left: 5px solid white;
+    padding: 15px 10px;
+
+    margin-top: 100px;
+}
+.banner-text p{
+    font-size: 20px;
+    font-weight: 20;
+    font-family: 'Questrial', sans-serif;
+}
+.banner-text h{
+    font-size: 40px;
+    font-weight: 20;
+    font-family: 'Questrial', sans-serif;
+}
+.banner-text h2 span{
+    font-family: 'Satisfy', cursive;
+}
+#servicio .row img{
+    width: 25%;
+}
+.titulo-rojo-trasn{
+    color: #990000;
+}
+
+footer{
+
+    background-color: #990000;
+    color: white; 
+    height: 5%;padding: 4px;
+    font-size: 100%;
+    font-weight: bold;
+
+}
+
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+#inicio-user {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+
+
+}
+#inicio-user img{
+    width: 40%;
+
+
+}
+header{
+    height: 5%;
+}
+.container-principal{
+    width: 100%;
+    height: 85%;
+}
+#iframe{
+    width: 100%;
+    height: 90%;
+    border: 0px;
+
+
+}
+.filaprincipal{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+47,ededed+100;White+3D+%231 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #cccccc;
+    color: #990000;
+    font-family: serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+tbody td{
+    border: 1px solid #cccccc;
+}
+.nav-user{
+    margin-top: 15px;
+    margin-right: 5px;
+}
+.icono {
+    width: 215px;
+}
+.icono p{
+    width: 70%;
+    float: left;
+    overflow: hidden;
+}
+.icono img{
+    width: 40px;
+    float: left;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+
+.row input,.row select,.row .label,.row textArea,.form_datetime{
+    margin-top: 10px;
+}
+#footermodal{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+47,ededed+100;White+3D+%231 */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 ); /* IE6-9 */
+    background-repeat: no-repeat;
+
+}
+
+
+#bodymodal .row{
+    margin: 0 auto;
+    width: 70%;
+}
+
+#menu{
+    width: 5%;
+    position: fixed;
+    float: left;
+    margin-top: 80px;
+    z-index: 100;
+    display: none;
+}
+#menu button{
+    color: #990000;
+    clear: both;
+    float: left;
+    margin-top: 10px;
+}
+
+#tabla_perfiles tr,#tabla_permisos_perfiles tr,#tabla-mantenimiento tr,#tablaparametros tr,#tablavalorparametros td,#tablapersonas td,#tablausuarios td,#tablainventario td, #tablaReservas tr{
+    cursor: pointer;
+}
+.pointer{
+    cursor: pointer;
+}
+tbody{
+    font-family: serif;
+    text-align: center;
+}
+.oculto{
+    display: none;
+}
+.error{
+    color: #990000;
+}
+#tabla_info_inventario td{
+    width: 70%;
+    text-align: left;
+}
+.tabla_info_inventario .ttitulo{
+    width: 30%;
+    text-align: center;
+}
+
+#Mensaje,#MensajeEliminar{
+    font-weight: bold;
+    font-family: serif;
+    font-size: 15px;
+    text-align: center;
+}
+.foto_perso img{
+    width: 100%;
+}#datos_usu{
+    border-left: 1px solid #cccccc;
+    padding-left: 5px;
+}
+.datos_usu{
+    border-left: 1px solid #cccccc;
+    padding-left: 5px;
+
+
+}
+
+@-webkit-keyframes tiembla{
+    0%  { -webkit-transform:rotateZ(-5deg); }
+    50% { -webkit-transform:rotateZ( 0deg) scale(.8); }
+    100%{ -webkit-transform:rotateZ( 5deg); }
+}
+.modal-50{
+    width: 50%;
+}
+.ttitulo{
+    color: #990000;
+}
+#datos_perso table td{
+    text-align: left;
+}
+thead,tbody{
+    display: none;
+}
+textArea, textarea{
+    resize: none;
+    margin-top: 10px;
+    font-family: sans-serif;
+}
+#ModalMantenimiento .modal-dialog{
+
+    width: 70%;
+}
+
+.form_datetime input{
+    margin :0px;
+    padding: 0px;
+}
+.form_datetime span{
+    color: #990000;
+
+}
+.label{
+    color: #990000; font-size: 13px;width: 100%;margin: 0 auto 
+}
+.modal-backdrop.in{
+    display: none;
+}
+#Agregar-mantenimiento select{
+    float: left;width: 70%;
+}
+#Agregar-mantenimiento span{
+    float: left;width: 20%; margin-left: 5px;
+}
+#principal{
+    background-repeat: no-repeat;
+
+
+}
+#principal2{
+    background-image: url("http://localhost/ReservaRecursosCUC/Imagenes/LogocucF.png");
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 50%;
+    background-size: 40%;
+    width: 100%;
+    height: 90%;
+
+
+}
+/*.icono,.logeo-index a,.logeo-index span{
+    color: white; 
+ 
+
+}
+.icono:hover{
+    color: white;
+    background-color: none;
+} 
+.logeo-index a:hover{
+    color: white; 
+
+} */
+
+.panel-header{
+    text-align: center;
+    color: #990000;
+    font-family: serif;
+   font-weight: bold;
+}
+#panel_sin_session{
+margin-top: 10%;
+margin-left: 25%;
+width: 50%;
+}
+.margin0{
+    margin:  0 auto;
+
+}
+ /* form input:required {
+       border-bottom: 2px solid #F78181;
+   
+    }
+    
+    form select:required {
+       border-bottom: 1px solid #F78181;
+ 
+    }*/
+ 
+ .red_primari{
+     color: #990000;
+ }
