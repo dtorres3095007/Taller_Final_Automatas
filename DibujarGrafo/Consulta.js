@@ -16,6 +16,10 @@ $(document).ready(function () {
             CrearNodos(valor, valor_Acep);
         }
     });
+    $("#terminar").click(function () {
+
+
+    });
 
     $("#guardar_cadena").click(function () {
         $(".error").hide("slow");
@@ -49,7 +53,7 @@ $(document).ready(function () {
 
 
 });
-function CrearNodos(label,final) {
+function CrearNodos(label, final) {
     $(".error").hide("slow");
     var indice_inicial = Buscar_indices(label);
     if (indice_inicial != -1) {
@@ -108,10 +112,10 @@ function  PintarGrafo() {
     var network = new vis.Network(container, data, options);
 }
 
-function GuardarEstado(estado,final) {
+function GuardarEstado(estado, final) {
     var inicial = 0;
-    if (indice==1){
-         inicial = 1;
+    if (indice == 1) {
+        inicial = 1;
     }
     $.ajax({
         url: "datos.php?estado=si",
@@ -127,6 +131,29 @@ function GuardarEstado(estado,final) {
             indice++;
             PintarGrafo();
             MensajeBien("ESTADO CREADO CON EXITO");
+        },
+        error: function () {
+
+            console.log('Something went wrong', status, err);
+
+        }
+    });
+}
+
+function TraerCadenas() {
+
+    $.ajax({
+        url: "datos.php?Listarcadenas=si",
+        dataType: "json",
+        type: "post",
+        success: function (datos) {
+            $("#resultado tbody").html("");
+      
+            for (var i = 0; i < datos.length; i++) {
+               
+               $("#resultado tbody").append("<tr><td>"+(i+1)+"</td><td>"+datos[i].cadena+"</td><td>"+datos[i].estado+"</td></tr>")
+            }
+
         },
         error: function () {
 
@@ -167,7 +194,7 @@ function GuardarCadena(cadena) {
         },
         success: function (datos) {
             MensajeBien("CADENA GUARDADA CON EXITO");
-
+         TraerCadenas();
         },
         error: function () {
 

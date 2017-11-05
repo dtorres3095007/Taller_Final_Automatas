@@ -35,6 +35,10 @@ TruncarTablas();
                 text-align: center;
                 font-weight: bold;
             }
+            .modal-header{
+                background-color: #07508E;
+                color: white;
+            }
 
 
         </style>
@@ -87,19 +91,42 @@ TruncarTablas();
                         <input type="text" class="form-control" placeholder="Cadena" id="txtcadena"><br> 
 
                         <button id="guardar_cadena" class="btn btn-primary">Guardar</button>
-                        <button id="terminar" class="btn btn-danger">Terminar y Ejecutar</button>
+                        <button id="terminar" class="btn btn-danger" data-toggle="modal" data-target="#myModal" data-backdrop="false">Terminar y Ejecutar</button>
                     </div>
                 </div>
             </div>
 
         </div>
+       
         <div class="col-md-8 principal">
             <div class="panel panel-primary principal">
                 <div class="panel-heading">Grafo Creado</div>
                 <div class="panel-body principal" id="mynetwork">Panel Content</div>
             </div>
         </div>
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog" bac>
+            <div class="modal-dialog">
 
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-center">Resultado</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-bordered tab-content table-responsive table-striped" id="resultado">
+                            <thead>    <tr class=""><td>No.</td><td>Cadena</td><td>Estado</td></tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
         <script src="jquery-2.2.1.js"></script>
         <script src="Consulta.js"></script>
