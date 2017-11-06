@@ -39,16 +39,13 @@ $(document).ready(function () {
         $(".error").hide("slow");
         var borde_inicial = $("#txtborde_inicial").val().toString();
         var borde_final = $("#txtborde_final").val().toString();
-        var peso = $("#txtpeso").val().toString();
+        var peso = $("#txtpeso").val();
         if (borde_inicial.length == 0) {
             MensajeError("INGRESE EL ESTADO INICIAL DE LA TRANSICION");
         } else if (borde_final.length == 0) {
 
             MensajeError("INGRESE EL ESTADO FINAL DE LA TRANSICION");
-        } else if (peso == 0) {
-
-            MensajeError("INGRESE VALOR DE LA TRANSICION");
-        } else {
+        }  else {
 
             CrearBordes(borde_inicial, borde_final, peso);
         }
