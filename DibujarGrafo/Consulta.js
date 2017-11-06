@@ -45,7 +45,7 @@ $(document).ready(function () {
         } else if (borde_final.length == 0) {
 
             MensajeError("INGRESE EL ESTADO FINAL DE LA TRANSICION");
-        }  else {
+        } else {
 
             CrearBordes(borde_inicial, borde_final, peso);
         }
@@ -126,8 +126,16 @@ function GuardarEstado(estado, final) {
             final: final
         },
         success: function (datos) {
+            if (indice == 1 && final == 1) {
+                nodes.push({id: indice, label: estado, color: "#FFFF00"});
+            } else if (final == 1) {
+                nodes.push({id: indice, label: estado, color: "#F78181"});
+            } else if (indice == 1) {
+                nodes.push({id: indice, label: estado, color: "#2EFE2E"});
+            } else {
+                nodes.push({id: indice, label: estado});
+            }
 
-            nodes.push({id: indice, label: estado});
             indice++;
             PintarGrafo();
             MensajeBien("ESTADO CREADO CON EXITO");
@@ -198,6 +206,7 @@ function Truncar() {
             nodes = [];
             PintarGrafo();
             $("input").val("");
+            indice = 1;
         },
         error: function () {
 
