@@ -4,7 +4,7 @@ indice = 1;
 $(document).ready(function () {
     //CargarDatos();
 
-   setInterval(function () {
+    setInterval(function () {
         TraerCadenas();
     }, 3000);
     $("#guardar_nodo").click(function () {
@@ -19,9 +19,9 @@ $(document).ready(function () {
             CrearNodos(valor, valor_Acep);
         }
     });
-    $("#terminar").click(function () {
+    $("#nuevo").click(function () {
 
-
+        Truncar();
     });
 
     $("#guardar_cadena").click(function () {
@@ -134,6 +134,7 @@ function GuardarEstado(estado, final) {
             indice++;
             PintarGrafo();
             MensajeBien("ESTADO CREADO CON EXITO");
+            $("input").val("");
         },
         error: function () {
 
@@ -151,10 +152,10 @@ function TraerCadenas() {
         type: "post",
         success: function (datos) {
             $("#resultado tbody").html("");
-      
+
             for (var i = 0; i < datos.length; i++) {
-               
-               $("#resultado tbody").append("<tr><td>"+(i+1)+"</td><td>"+datos[i].cadena+"</td><td>"+datos[i].estado+"</td></tr>")
+                $("#resultado tbody").append("<tr ><td>" + (i + 1) + "</td><td>" + datos[i].cadena + "</td><td>" + datos[i].estado + "</td></tr>");
+
             }
 
         },
@@ -179,6 +180,27 @@ function GuardarTrancision(peso, indice_inicial, indice_final, inicial, final) {
             MensajeBien("TRANSICION CREADA CON EXITO");
             edges.push({from: indice_inicial, to: indice_final, label: peso});
             PintarGrafo();
+            $("input").val("");
+        },
+        error: function () {
+
+            console.log('Something went wrong', status, err);
+
+        }
+    });
+}
+function Truncar() {
+
+    $.ajax({
+        url: "datos.php?truncar=si",
+        dataType: "json",
+        type: "post",
+        success: function (datos) {
+            MensajeBien("YA PUEDES TRABAJAR");
+            edges = [];
+            nodes = [];
+            PintarGrafo();
+            $("input").val("");
         },
         error: function () {
 
@@ -197,7 +219,7 @@ function GuardarCadena(cadena) {
         },
         success: function (datos) {
             MensajeBien("CADENA GUARDADA CON EXITO");
-      
+            $("input").val("");
         },
         error: function () {
 

@@ -7,6 +7,11 @@ if (!empty($_GET['estado'])) {
     $final = $_POST['final'];
     echo json_encode(GuardarEstado($valor, $inicial, $final));
 }
+if (!empty($_GET['truncar'])) {
+
+    TruncarTablas();
+    echo json_encode(1);
+}
 if (!empty($_GET['trancision'])) {
 
     $valor = $_POST['valor'];

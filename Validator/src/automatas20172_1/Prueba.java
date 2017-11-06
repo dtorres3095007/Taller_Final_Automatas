@@ -25,7 +25,7 @@ public class Prueba {
             grafo.agregarEstadoTransicion(estados_transicion.get(i).getInicial(), estados_transicion.get(i).getFinal(), estados_transicion.get(i).getValor());
            // System.out.println("Final: "+estados_transicion.get(i).getInicial() +" Final: "+ estados_transicion.get(i).getFinal()+" Valor "+estados_transicion.get(i).getValor());
         }
-        System.out.println(grafo);
+       
     
         for (int i = 0; i < cadenas.size(); i++) {
           String x = ""+  grafo.evaluarCadena(cadenas.get(i).getValor());

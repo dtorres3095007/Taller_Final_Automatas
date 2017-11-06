@@ -3,14 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/DAMIAN/Downloads/BS_Gestion_Grafo_20172_Evalucion/src/automatas20172_1/SwingBrowser.java</file>
-            <file>file:/C:/Users/DAMIAN/Downloads/BS_Gestion_Grafo_20172_Evalucion/src/automatas20172_1/Conexion.java</file>
-            <file>file:/C:/Users/DAMIAN/Downloads/BS_Gestion_Grafo_20172_Evalucion/src/automatas20172_1/Estado.java</file>
-            <file>file:/C:/Users/DAMIAN/Downloads/BS_Gestion_Grafo_20172_Evalucion/src/automatas20172_1/Principal.java</file>
-            <file>file:/C:/Users/DAMIAN/Downloads/BS_Gestion_Grafo_20172_Evalucion/src/automatas20172_1/Grafo.java</file>
-            <file>file:/C:/Users/DAMIAN/Downloads/BS_Gestion_Grafo_20172_Evalucion/src/automatas20172_1/Transicion.java</file>
-            <file>file:/C:/Users/DAMIAN/Downloads/BS_Gestion_Grafo_20172_Evalucion/src/automatas20172_1/Prueba.java</file>
-            <file>file:/C:/Users/DAMIAN/Downloads/BS_Gestion_Grafo_20172_Evalucion/src/automatas20172_1/Datos.java</file>
+            <file>file:/C:/xampp/htdocs/Proyecto/Validator/src/automatas20172_1/Cadenas.java</file>
+            <file>file:/C:/xampp/htdocs/Proyecto/Validator/src/automatas20172_1/Grafo.java</file>
+            <file>file:/C:/xampp/htdocs/Proyecto/Validator/src/automatas20172_1/Datos.java</file>
+            <file>file:/C:/xampp/htdocs/Proyecto/Validator/src/automatas20172_1/Estado.java</file>
+            <file>file:/C:/xampp/htdocs/Proyecto/Validator/src/automatas20172_1/Principal.java</file>
+            <file>file:/C:/xampp/htdocs/Proyecto/Validator/src/automatas20172_1/Estado_Transicion.java</file>
+            <file>file:/C:/xampp/htdocs/Proyecto/Validator/src/automatas20172_1/Prueba.java</file>
+            <file>file:/C:/xampp/htdocs/Proyecto/Validator/src/automatas20172_1/Conexion.java</file>
         </group>
     </open-files>
 </project-private>

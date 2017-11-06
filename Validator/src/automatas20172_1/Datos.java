@@ -39,7 +39,7 @@ public class Datos {
                 return null;
 
             }
-            String sql = "SELECT * FROM `cadenas` WHERE 1";
+            String sql = "SELECT * FROM `cadenas` WHERE estado = 'Sin Validar'";
 
             send = con.createStatement();
             ResultSet rs = send.executeQuery(sql);
