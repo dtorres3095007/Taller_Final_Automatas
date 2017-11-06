@@ -4,6 +4,9 @@ indice = 1;
 $(document).ready(function () {
     //CargarDatos();
 
+   setInterval(function () {
+        TraerCadenas();
+    }, 3000);
     $("#guardar_nodo").click(function () {
         $(".error").hide("slow");
         var valor = $("#txtnodo").val().toString();
@@ -73,7 +76,7 @@ function CrearBordes(inicial, final, peso) {
     } else if (indice_final == -1) {
         MensajeError("EL ESTADO FINAL DE LA TRANSICION NO EXISTE");
     } else {
-        GuardarTrancision(peso, indice_inicial, indice_final, final, inicial);
+        GuardarTrancision(peso, indice_inicial, indice_final, inicial, final);
 
     }
 
@@ -194,7 +197,7 @@ function GuardarCadena(cadena) {
         },
         success: function (datos) {
             MensajeBien("CADENA GUARDADA CON EXITO");
-         TraerCadenas();
+      
         },
         error: function () {
 

@@ -22,15 +22,14 @@ public class Datos {
     Conexion c = new Conexion();
     Connection con;
     Statement send;
-    ArrayList<String> cadenas = new ArrayList<>();
+    ArrayList<Cadenas> cadenas = new ArrayList<>();
     ArrayList<Estado> estados = new ArrayList<>();
-     ArrayList<Estado_Transicion> estado_Transicion = new ArrayList<>();
-    
+    ArrayList<Estado_Transicion> estado_Transicion = new ArrayList<>();
 
     public Datos() {
     }
 
-    public ArrayList<String> ObtenerCadenas() {
+    public ArrayList<Cadenas> ObtenerCadenas() {
 
         try {
 
@@ -44,10 +43,10 @@ public class Datos {
 
             send = con.createStatement();
             ResultSet rs = send.executeQuery(sql);
-         
+
             while (rs.next()) {
-               
-                cadenas.add(rs.getString("cadena"));
+                Cadenas a = new Cadenas(rs.getInt("id"), rs.getString("cadena"));
+                cadenas.add(a);
 
             }
             return cadenas;
@@ -59,8 +58,8 @@ public class Datos {
         return null;
 
     }
-    
-     public ArrayList<Estado> ObtenerEstados() {
+
+    public ArrayList<Estado> ObtenerEstados() {
 
         try {
 
@@ -74,15 +73,19 @@ public class Datos {
 
             send = con.createStatement();
             ResultSet rs = send.executeQuery(sql);
-         
+
             while (rs.next()) {
-                boolean Inicial=false, Final=false;
-                int F=rs.getInt("final");
-                int I=rs.getInt("inicial");
+                boolean Inicial = false, Final = false;
+                int F = rs.getInt("final");
+                int I = rs.getInt("inicial");
                 String valor = rs.getString("valor");
-                if(F==1)Final = true;
-                if(I==1)Inicial = true;
-               Estado a = new Estado(Inicial, Final, valor);
+                if (F == 1) {
+                    Final = true;
+                }
+                if (I == 1) {
+                    Inicial = true;
+                }
+                Estado a = new Estado(Inicial, Final, valor);
                 estados.add(a);
 
             }
@@ -95,8 +98,8 @@ public class Datos {
         return null;
 
     }
-     
-          public ArrayList<Estado_Transicion> ObtenerEstadosTrancision() {
+
+    public ArrayList<Estado_Transicion> ObtenerEstadosTrancision() {
 
         try {
 
@@ -110,14 +113,14 @@ public class Datos {
 
             send = con.createStatement();
             ResultSet rs = send.executeQuery(sql);
-         
+
             while (rs.next()) {
-               
-                String Final=rs.getString("final");
-                String Inicial=rs.getString("inicial");
+
+                String Final = rs.getString("final");
+                String Inicial = rs.getString("inicial");
                 String valor = rs.getString("valor");
-      
-               Estado_Transicion a = new Estado_Transicion(valor,Inicial, Final);
+
+                Estado_Transicion a = new Estado_Transicion(valor, Inicial, Final);
                 estado_Transicion.add(a);
 
             }
@@ -129,6 +132,38 @@ public class Datos {
         }
         return null;
 
+    }
+
+    public boolean CambiarEtado(String id, String estado) {
+
+        con = c.conex();
+        try {
+
+            String sql = "UPDATE `cadenas` SET `estado`='" + estado + "' WHERE `id`='" + id + "'";
+            Statement statement = con.createStatement();
+            int modi = statement.executeUpdate(sql);
+            if (modi == 1) {
+                return true;
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error");
+        }
+
+        return false;
+    }
+
+    public static void esperarXsegundos(int segundos) {
+        try {
+            Thread.sleep(segundos * 1000);
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+    }
+    public static void Run(){
+        while (true) {            
+            esperarXsegundos(1);
+            System.out.println("Holaa");
+        }
     }
 
 }

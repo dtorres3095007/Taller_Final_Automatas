@@ -12,21 +12,26 @@ public class Prueba {
     public static void main(String[] args) {
         Grafo grafo = new Grafo();
         Datos a = new Datos();
-        ArrayList<String> cadenas = a.ObtenerCadenas();
+        ArrayList<Cadenas> cadenas = a.ObtenerCadenas();
         ArrayList<Estado> estados = a.ObtenerEstados();
         ArrayList<Estado_Transicion> estados_transicion = a.ObtenerEstadosTrancision();
-        System.out.println("ESTADOS");
 
         for (int i = 0; i < estados.size(); i++) {
-            System.out.println("Estado:" + estados.get(i).nombre + " Inicial: " + estados.get(i).isInicial() + " Final: " + estados.get(i).isFinal());
+           // System.out.println("Estado: "+estados.get(i).nombre + " Inicial: "+estados.get(i).isInicial()+ " Final: "+estados.get(i).isFinal() );
+            grafo.crearEstadoYObtener(estados.get(i).nombre, estados.get(i).isInicial(), estados.get(i).isFinal());
         }
-        System.out.println("TRANCISION");
+
         for (int i = 0; i < estados_transicion.size(); i++) {
-            System.out.println("Valor:" + estados_transicion.get(i).getValor() + " Inicial: " + estados_transicion.get(i).getInicial() + " Final: " + estados_transicion.get(i).getFinal());
+            grafo.agregarEstadoTransicion(estados_transicion.get(i).getInicial(), estados_transicion.get(i).getFinal(), estados_transicion.get(i).getValor());
+           // System.out.println("Final: "+estados_transicion.get(i).getInicial() +" Final: "+ estados_transicion.get(i).getFinal()+" Valor "+estados_transicion.get(i).getValor());
         }
-        System.out.println("CADENA");
+        System.out.println(grafo);
+    
         for (int i = 0; i < cadenas.size(); i++) {
-            System.out.println("Cadena:" + cadenas.get(i));
+          String x = ""+  grafo.evaluarCadena(cadenas.get(i).getValor());
+          String id = ""+cadenas.get(i).getId();
+        a.CambiarEtado(id, x);
+
         }
         /*
         ///Alt +28∟

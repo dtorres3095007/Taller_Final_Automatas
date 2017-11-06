@@ -5,6 +5,8 @@
  */
 package automatas20172_1;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author DAMIAN
@@ -22,6 +24,32 @@ public class Principal extends javax.swing.JFrame {
         browser.loadURL("http://localhost/Proyecto/DibujarGrafo/index.php");
         browser.setBounds(1, 1, jPanel1.getWidth() - 1, jPanel1.getHeight() - 1);
         jPanel1.add(browser);
+
+    }
+
+    public void Ejecutar() {
+        Grafo grafo = new Grafo();
+        Datos a = new Datos();
+        ArrayList<Cadenas> cadenas = a.ObtenerCadenas();
+        ArrayList<Estado> estados = a.ObtenerEstados();
+        ArrayList<Estado_Transicion> estados_transicion = a.ObtenerEstadosTrancision();
+        for (int i = 0; i < estados.size(); i++) {
+            // System.out.println("Estado: "+estados.get(i).nombre + " Inicial: "+estados.get(i).isInicial()+ " Final: "+estados.get(i).isFinal() );
+            grafo.crearEstadoYObtener(estados.get(i).nombre, estados.get(i).isInicial(), estados.get(i).isFinal());
+        }
+
+        for (int i = 0; i < estados_transicion.size(); i++) {
+            grafo.agregarEstadoTransicion(estados_transicion.get(i).getInicial(), estados_transicion.get(i).getFinal(), estados_transicion.get(i).getValor());
+            // System.out.println("Final: "+estados_transicion.get(i).getInicial() +" Final: "+ estados_transicion.get(i).getFinal()+" Valor "+estados_transicion.get(i).getValor());
+        }
+        System.out.println(grafo);
+
+        for (int i = 0; i < cadenas.size(); i++) {
+            String x = "" + grafo.evaluarCadena(cadenas.get(i).getValor());
+            String id = "" + cadenas.get(i).getId();
+            a.CambiarEtado(id, x);
+
+        }
     }
 
     /**
@@ -34,26 +62,47 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setBackground(new java.awt.Color(0, 102, 255));
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Ejecutar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1500, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(1361, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 780, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(726, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(23, 23, 23))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, 780));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       Ejecutar();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -86,11 +135,13 @@ public class Principal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Principal().setVisible(true);
+
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

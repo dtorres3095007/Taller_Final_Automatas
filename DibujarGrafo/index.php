@@ -19,7 +19,7 @@ TruncarTablas();
                 height: 90%;
             }
             body{
-                overflow:hidden; 
+            
             }
             .capa{
                 margin: 0 auto;
@@ -91,7 +91,7 @@ TruncarTablas();
                         <input type="text" class="form-control" placeholder="Cadena" id="txtcadena"><br> 
 
                         <button id="guardar_cadena" class="btn btn-primary">Guardar</button>
-                        <button id="terminar" class="btn btn-danger" data-toggle="modal" data-target="#myModal" data-backdrop="false">Terminar y Ejecutar</button>
+                        <button id="terminar" class="btn btn-danger" data-toggle="modal" data-target="#myModal" data-backdrop="false">Mostrar</button>
                     </div>
                 </div>
             </div>
