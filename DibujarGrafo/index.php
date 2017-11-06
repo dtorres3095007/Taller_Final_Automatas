@@ -47,7 +47,7 @@ TruncarTablas();
         <br>
         <div class="col-md-4 principal">
 
-
+          
             <div class="error alert alert-danger"></div>
             <div class="bien alert alert-success"></div>
 
