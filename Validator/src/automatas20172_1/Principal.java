@@ -21,7 +21,7 @@ public class Principal extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setTitle("ANALIZADOR");
         SwingBrowser browser = new SwingBrowser();
-        browser.loadURL("http://localhost/Proyecto/DibujarGrafo/index.php");
+        browser.loadURL("http://localhost/Taller_Final_Automatas/DibujarGrafo/index.php");
         browser.setBounds(1, 1, jPanel1.getWidth() - 1, jPanel1.getHeight() - 1);
         jPanel1.add(browser);
 
@@ -82,17 +82,17 @@ public class Principal extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(1361, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(526, 526, 526)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
+                .addContainerGap(861, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(726, Short.MAX_VALUE)
+                .addContainerGap(603, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(23, 23, 23))
+                .addGap(146, 146, 146))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, 780));

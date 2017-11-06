@@ -56,7 +56,7 @@ TruncarTablas();
 
                     <div class="col-md-12">
                         <label>Ingrese Estado</label>
-                        <input type="text" class="form-control" placeholder="Borde" id="txtnodo"> 
+                        <input type="text" class="form-control" placeholder="Estado" id="txtnodo"> 
                         <br>
                         <label>Es de Aceptacion</label>
                         <br>
@@ -70,11 +70,11 @@ TruncarTablas();
                     <div class="col-md-12">
                         <br>
                         <label>Ingrese Trancisiones</label>
-                        <input type="text" class="form-control" placeholder="Borde Inicial" id="txtborde_inicial"><br> 
-                        <input type="text" class="form-control" placeholder="Borde Final" id="txtborde_final">
+                        <input type="text" class="form-control" placeholder="Estado Inicial" id="txtborde_inicial"><br> 
+                        <input type="text" class="form-control" placeholder="Estado Final" id="txtborde_final">
                         <br><input type="text" class="form-control" placeholder="Valor" id="txtpeso">
                         <br>
-                        <button id="guardar_Borde" class="btn btn-primary">Crear Borde</button>
+                        <button id="guardar_Borde" class="btn btn-primary">Crear Trancision</button>
                     </div>
 
 
