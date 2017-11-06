@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class Transicion {
 
-    public static final String LAMBDA = "∟";
+    public static final String LAMBDA = "";
 
     private final Estado estadoSiguiente;
     private Set<String> textoTransicion = new LinkedHashSet<>();
